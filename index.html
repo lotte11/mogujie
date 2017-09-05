@@ -41,12 +41,15 @@
 			 	  	    	  <div class="selectbox l">
 			 	  	    	  	    <span class="selected">搜商品</span>
 			 	  	    	  </div>
-			 	  	    	  <form class="top_nav_form">
-			 	  	    	  	   <input type="text" class="ts_txt l" placeholder="春秋款长裤套装"/>
+			 	  	    	  <div class="top_nav_form" id="box22" >
+			 	  	    	  	   <input type="text" class="ts_txt l" placeholder="春秋款长裤套装" v-model="baidu"/>
 			 	  	    	  	   <input type="text" class="ts_btn r" value="搜索"/>
-			 	  	    	  </form>
+			 	  	    	  	    <ul class="serchul" v-if="list">
+            								<li v-for="i in list">{{i}}</li>
+            						</ul>
+			 	  	    	  </div>
 			 	  	    	  
-			 	  	    </div>
+			 	  	   </div>
 			 	  	   <div class="ts_hotwords">
 			 	  	      <a class="l">母季开学季</a>  
 			 	  	      <a class="l">小白鞋</a>
@@ -86,6 +89,12 @@
 			   	       <a class="a_biaotr2 l">限时快抢</a>
 			   	       <a class="a_biaotr3 l">品质优选</a>
 			   	       
+			   	       
+			   	       
+			   	       
+			   	       
+			   	       
+			   	       
 			   </div>
 			 </div>
 		</div>
@@ -97,11 +106,11 @@
 	    	     	
 	    	     	  <div class="lunbo_left l">
 	    	     	  	
-	    	     	  	   <ul class="nav_list" role="mebu">
+	    	     	<ul class="nav_list" role="mebu">
 
 					<!-- 遍历生成样式 -->
 						<li class="nav_list_row" data-topic="coat">
-							<dl class="nav_wrap">
+							<!--<dl class="nav_wrap">
 								<dt class="nav_list_title">
 									<a rel="nofollow" class="catagory" target="_blank" href="http://list.mogujie.com/book/clothing/50003">上衣</a>
 								</dt>
@@ -113,9 +122,26 @@
 										<a class="when_960_hidden" rel="nofollow" target="_blank" href="http://list.mogujie.com/book/clothing/50249">衬衫</a>
 									</span>
 								</dd>
-							</dl>
+							</dl>-->
+							
+							
+							
+							<ul class="nav_wrap">
+								
+								
+								 <li class="nav_list_title"><a href="#" class="catagory">上衣</a></li>
+								 <li class="nav_list_title"><a href="#" class="catagory">上衣</a></li>
+								 <li class="nav_list_title"><a href="#" class="catagory">上衣</a></li>
+								 <li class="nav_list_title"><a href="#" class="catagory">上衣</a></li>
+								 
+								 
+							</ul>
+							
+							
+							
+							
 						</li>
-																							<li class="nav_list_row" data-topic="skirt">
+						 <li class="nav_list_row" data-topic="skirt">
 							<dl class="nav_wrap">
 								<dt class="nav_list_title">
 									<a rel="nofollow" class="catagory" target="_blank" href="http://list.mogujie.com/book/skirt/50004">裙子</a>
@@ -362,7 +388,11 @@
 	          	  	  <div class="mrl_1 l">
 	          	  	  	   <div class="mrl_1_top">
 	          	  	  	   	    <div class="xskq">限时抢购</div>
-	          	  	  	   	    <div class="xskq_time">01:16:10</div>
+	          	  	  	   	    <div class="xskq_time">
+	          	  	  	   	    	<span class="h">01</span>:
+	          	  	  	   	    	<span class="m">16</span>:
+	          	  	  	   	    	<span class="s">10</span>
+	          	  	  	   	    </div>
 	          	  	  	   </div>
 	          	  	  	   <!---定位的圆形--->
 	          	  	  	   <div class="quikqiang">
@@ -399,7 +429,11 @@
 	          	  	 <div class="mrl_1 l">
 	          	  	  	   <div class="mrl_1_top">
 	          	  	  	   	    <div class="xskq">限时抢购</div>
-	          	  	  	   	    <div class="xskq_time">01:16:10</div>
+	          	  	  	   	    <div class="xskq_time">
+	          	  	  	   	    	<span class="h">01</span>:
+	          	  	  	   	    	<span class="m">16</span>:
+	          	  	  	   	    	<span class="s">10</span>
+	          	  	  	   	    </div>
 	          	  	  	   </div>
 	          	  	  	   <!---定位的圆形--->
 	          	  	  	   <div class="quikqiang">
@@ -457,7 +491,7 @@
 		    	</div>
 		    	<div class="hrcd_tp">
 		    		   
-		    		   <div class="hrcd_tp_1 l"><img src="img/hr_pic1.png"></div>
+		    		   <div class="hrcd_tp_1 l"><img id="img1" src="img/hr_pic1.png"></div>
 		    		   <div class="hrcd_tp_2 l"><img src="img/hr_pic2.png"></div>
 		    		   <div class="hrcd_tp_3 l"><img src="img/hr_pic3.png"></div>
 		    		   <div class="hrcd_tp_4 l"><img src="img/hr_pic4.png"></div>
@@ -965,7 +999,7 @@
 	       </div>
 	      
 	   	   <div class="pptmbt l">
-	   	   	  
+	   	   	 
 	   	   	   <div class="pptmbottom_01 l">
 	   	   	     <img src="img/pppic01.png" class="pppic_im_1"/>
 	   	   	     <div class="pptmbottom_bt">
@@ -1033,6 +1067,7 @@
 	   	   	     </div>
 	   	   	    </div>
 	   	   </div> 
+	   	   
            <div class="pptmbt2 l">
            	 
            	     <div class="pptmbt2_top">流行元素</div>
@@ -1064,6 +1099,7 @@
            	     	 
            	     </div>
            </div>
+          
 	   </div>
 	    
 	  
@@ -1400,8 +1436,9 @@
 	    
 	</body>
 </html>
-
-
+<script src="js/vue.js"></script>
+	<script src="js/vue-resource.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js" ></script>
 <script>
 	
@@ -1419,5 +1456,137 @@
      paginationClickable:true,
     // 如果需要滚动条
     scrollbar: '.swiper-scrollbar',
-  })        
+  })       
+  
+
+  
+    window.onscroll=function(){
+	 	
+	 	 var t = document.documentElement.scrollTop || document.body.scrollTop;
+	 	 var top_div = document.getElementsByClassName( "header_mid" ); 
+	 	if(t>490){
+	 		
+	 		$(".header_mid").addClass("fix")
+	 		
+	 	}else{
+	 		$(".header_mid").removeClass("fix")
+	 	}
+	 	
+	 	
+	 } 
+     
+     
+   $(function(){
+	$(".hrcd_tp_1").mouseover(function(){
+		$("#img1").animate({
+			"width":"0px",
+			"right":"50%"
+			
+		},1000,function(){
+			//console.log(this);
+			this.src="img/hr_pic2.png";
+			$(this).animate({
+				"width":"180px",
+				"right":"50%"
+			},1000);
+		});
+	});
+});
+
+  
+  
+   countTime();
+		
+	
+	
+	
+	 /***
+	   * 
+	   * 倒计时方法
+	   * 
+	   * 
+	   * ***/
+	  	
+        function countTime() {
+            //获取当前时间
+            var date = new Date();
+            var now = date.getTime();
+            //设置截止时间
+            var endDate = new Date("2017-10-1 23:23:23");
+            var end = endDate.getTime();
+            //时间差
+            var leftTime = end-now;
+            //定义变量 d,h,m,s保存倒计时的时间
+            var d,h,m,s;
+            if (leftTime>=0) {
+                d = Math.floor(leftTime/1000/60/60/24);
+                h = Math.floor(leftTime/1000/60/60%24);
+                m = Math.floor(leftTime/1000/60%60);
+                s = Math.floor(leftTime/1000%60);                   
+            }
+            if(h<10){
+            	h="0"+h;
+            }
+            if(m<10){
+            	m="0"+m;
+            }
+            if(s<10){
+            	s="0"+s;
+            }
+            //将倒计时赋值到div中
+           // document.getElementById("_d").innerHTML = d+"天";
+           // document.querySelector(".h").innerHTML = h+"时";
+            document.querySelector(".h").innerHTML = h;
+            document.querySelector(".m").innerHTML = m;
+            document.querySelector(".s").innerHTML = s;
+           
+          
+            //递归每秒调用countTime方法，显示动态时间效果
+            setTimeout(countTime,1000);
+
+        }
+  
+  
+  /**
+   * 搜索
+   * **/
+			var app1 = new Vue({
+			el:"#box22",
+			data:{//数据
+				baidu:"",
+				list:[
+				]
+			}
+		})
+			
+		app1.$watch("baidu",function(newval){
+			var api="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+newval;
+			this.$http.jsonp(api,{jsonp:"cb"}).then(function(data){
+		              this.list=data.body.s;
+		            
+			},function(err){
+				console.log(err)
+			})
+		});
+      
+       
+/*app1.$watch("one",function(newval){
+	var api="http://search.m.yhd.com/search/getSmartKeyword/?keyword"+newval;
+	this.$http.jsonp(api).then(function(data){
+              this.list=data.body.hotSearchKeywords;
+              //console.log(data.body.hotSearchKeywords);
+	},function(err){
+		console.log(err)
+	})
+})
+*/
+//点击搜索栏让下拉搜索消失
+document.onclick=function(){
+	document.querySelector(".serchul").innerHTML ="";
+//	alert($)
+}
+
+
+	
   </script>
+
